@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: gorm_view_test_postgres
+    environment:
+      POSTGRES_DB: gorm_view_test_db
+      POSTGRES_USER: gorm_user
+      POSTGRES_PASSWORD: gorm_password
+    ports:
+      - "5432:5432"
+    restart: no
